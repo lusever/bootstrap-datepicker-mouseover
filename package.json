@@ -1,0 +1,20 @@
+{
+  "name": "bootstrap-datepicker-mouseover",
+  "version": "1.0.0",
+  "description": "Bootsrap Datepicker extension for range preview when calendar is open.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lusever/bootstrap-datepicker-mouseover.git"
+  },
+  "author": {
+    "name": "Pavel Kornilov",
+    "email": "lusever@lusever.com",
+    "url": "http://lusever.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lusever/bootstrap-datepicker-mouseover/issues"
+  },
+  "homepage": "https://github.com/lusever/bootstrap-datepicker-mouseover"
+}
