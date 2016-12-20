@@ -43,6 +43,9 @@
     var currentIndex = e.data.index;
     var days = picker.picker.find('.day');
     var currentDate;
+    if (!picker.range) {
+      return;
+    }
     var range = picker.range.slice(0);
     var selected = picker.range.slice(0); // clone
 
