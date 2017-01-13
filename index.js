@@ -32,6 +32,11 @@
   }
 
   function onPickerMouseEnter(e) {
+    var picker = e.data.picker;
+    if (!picker.range) {
+      return;
+    }
+
     var target = $(e.target);
     if (!target.hasClass('day')) {
       return;
@@ -39,13 +44,9 @@
     if (target.hasClass('disabled')) {
       target = null;
     }
-    var picker = e.data.picker;
     var currentIndex = e.data.index;
     var days = picker.picker.find('.day');
     var currentDate;
-    if (!picker.range) {
-      return;
-    }
     var range = picker.range.slice(0);
     var selected = picker.range.slice(0); // clone
 
