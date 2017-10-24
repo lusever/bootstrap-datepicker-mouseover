@@ -19,5 +19,5 @@
   },
   "peerDependencies": {
     "bootstrap-datepicker": "^1.6"
-  },
+  }
 }
