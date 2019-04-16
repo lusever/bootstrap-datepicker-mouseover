@@ -10,8 +10,7 @@
   },
   "author": {
     "name": "Pavel Kornilov",
-    "email": "lusever@lusever.com",
-    "url": "http://lusever.com"
+    "url": "http://lusever.ru"
   },
   "license": "MIT",
   "bugs": {
@@ -19,5 +18,8 @@
   },
   "peerDependencies": {
     "bootstrap-datepicker": "^1.6"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
   }
 }

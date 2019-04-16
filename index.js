@@ -1,7 +1,15 @@
 /**
  * Bootsrap Datepicker extension for range preview when calendar is open.
  */
-(function($) {
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    factory(require('jquery'));
+  } else {
+    factory(jQuery);
+  }
+}(function ($) {
   'use strict';
 
   function parseDay(picker, target) {
@@ -61,9 +69,9 @@
     for (var i = 0; i < days.length; i++) {
       var d = days.eq(i);
       var date = parseDay(picker, d);
-      var isRange = date > range[0] && date < range[range.length-1];
+      var isRange = date > range[0] && date < range[range.length - 1];
       var isRangeStart = date === range[0];
-      var isRangeEnd = date === range[range.length-1];
+      var isRangeEnd = date === range[range.length - 1];
       var isSelected = range.indexOf(date) !== -1;
       d.toggleClass('range', isRange);
       d.toggleClass('range-start', isRangeStart);
@@ -82,13 +90,13 @@
     picker.fill();
   }
 
-  $.fn.datepickerMouseover = function() {
+  $.fn.datepickerMouseover = function () {
     var datepicker = this.data('datepicker');
     for (var i = 0; i < datepicker.pickers.length; i++) {
       var picker = datepicker.pickers[i];
-      picker.picker.on('mouseenter', '.day', {picker: picker, index: i}, onPickerMouseEnter);
+      picker.picker.on('mouseenter', '.day', { picker: picker, index: i }, onPickerMouseEnter);
       picker.picker.on('mouseleave', 'tbody', picker, onPickerMouseLeave);
       this.on('hide', picker, onPickerMouseLeave);
     }
   };
-})(jQuery);
+}));
